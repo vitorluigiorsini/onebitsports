@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300;700&display=swap');
+/* ==== RESET ==== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==== ROOT ==== */
+:root {
+  font-size: 62.5%;
+  /* 10px = 1rem */
+  --primaryColor: #292929;
+  --primaryColorLight: #393939;
+  --textLightColor: white;
+  --hoverDarkColor: black;
+  --hoverLightColor: gainsboro;
+}
+
+/* ==== GENERAL ==== */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== HEADER ==== */
+.header {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 1rem 1.5rem;
+
+  background-color: var(--primaryColor);
+}
+
+.headerLogo {
+  width: 18rem;
+}
+
+.headerNavigation {
+  display: flex;
+  gap: 2rem;
+}
+
+.navBtn {
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: all .3s;
+  cursor: pointer;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--textLightColor);
+}
+
+.navBtn:hover {
+  border-bottom-color: var(--hoverLightColor);
+}
+
+/* ==== MAIN-HEADER ==== */
+.mainHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 0.6rem;
+}
+
+.mainHeaderTitle {
+  font-family: 'Kaushan Script', cursive; 
+  font-size: 3rem;
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+.mainHeaderParagraph {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  color: var(--primaryColorLight);
+  text-align: center;
+}
+
+/* ==== MAIN-CONTAINER ==== */
+.mainContainer {
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 'mainContent sidebarContent';
+  padding: 2rem;
+  gap: 1rem;
+}
+
+/* ==== MAIN-CONTENT ==== */
+.mainContent {
+  grid-area: mainContent;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+  height: 38rem;
+  border: 3px solid transparent;
+  border-radius: 1rem;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.mainCard:hover {
+  border-color: var(--hoverDarkColor);
+}
+
+.mainCardImg {
+  width: 100%;
+  height: 18rem;
+  border-radius: 1rem;
+}
+
+.mainCardTitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: var(--primaryColor);
+  padding: 0.6rem;
+}
+
+.mainCardDescription {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primaryColor);
+  padding: 0.6rem;
+}
+
+/* ==== SIDEBAR-CONTENT ==== */
+.sidebarContent {
+  grid-area: sidebarContent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-width: 30rem;
+
+  background-color: var(--primaryColorLight);
+  border-radius: 1rem;
+}
+
+.sidebarTitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  color: var(--textLightColor);
+  padding: 1rem;
+}
+
+.sidebarCard {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.sidebarCard:hover {
+  border-color: var(--hoverLightColor);
+}
+
+.sidebarCardImg {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.sidebarCardTitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  color: var(--textLightColor);
+  padding: 0.6rem;
+  text-align: center;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 1rem 1.5rem;
+
+  background-color: var(--primaryColor);
+}
+
+.footerLogo {
+  width: 18rem;
+}
+
+.footerBackToTopAnchor {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--textLightColor);
+  text-decoration: none;
+}
+
+/* ==== RESPONSIVE-640px ==== */
+@media (max-width: 640px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebarContent{
+    min-width: auto;
+  }
+}
+
+/* ==== RESPONSIVE-520px ==== */
+@media (max-width: 520px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
