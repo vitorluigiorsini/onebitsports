@@ -1,10 +1,20 @@
+![Página Onebitsports](https://i.imgur.com/1pimJTu.png)
+
 # OneBitSports
 
-Onebitsports page created using semantic html code, structured css and with hover effects.
+Página criada baseada no curso de CSS Moderno da OneBitCode. A página foi totalmente implementada sem a tulização de frameworks.
 
-Based on OneBitCode Modern CSS Course.
+## Habilidades trabalhadas
 
-## Stacks
+- Mobile First
+- Manipulação de flexbox e grid
+- Efeitos de transição
+- Hover nos botões e links
+- Responsividade da página
+- Escrita HTML semântica
+- Estruturação do CSS
 
-- HTML5
-- CSS3
+## Stacks utilizadas
+
+- HTML
+- CSS
